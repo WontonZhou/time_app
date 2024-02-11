@@ -7,8 +7,8 @@ def hello_world():
     return 'Hello world!'
 
 @app.route('/time')
-def current_time():
-    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+def time():
+    return datetime.now().ctime()
 
 app.run(host='0.0.0.0',
         port=8080,
